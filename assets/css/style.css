@@ -1,0 +1,16 @@
+.container
+{
+    
+    background-color: aquamarine;
+    margin-top: 130px;
+}
+.card 
+{
+    background-color: gray;
+
+}
+.hidden 
+{
+    visibility: hidden;
+    display: none;
+}
