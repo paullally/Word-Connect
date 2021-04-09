@@ -49,7 +49,6 @@ $.getJSON("game.json", function(json) {
         console.log(check)
         if(check.length==4)
         {
-            $(".card").css("background-color", "grey");
             let count =0;
             for(var i =0; i<check.length; i++)
             {
@@ -61,6 +60,20 @@ $.getJSON("game.json", function(json) {
             if(count==4)
             {
                 console.log("correct")
+                check=[];
+                for(var i =0; i<17; i++)
+                {
+                    console.log($(".card").eq(i).css("background-color"))
+                    if($(".card").eq(i).css("background-color")=="rgb(255, 255, 0)")
+                    {
+                         $(".card").eq(i).css("background-color","green")
+                    }
+                }
+            }
+            else
+            {
+                 check=[];
+                 $(".card").css("background-color", "grey");
             }
         }
         
