@@ -10,6 +10,14 @@ function shuffle(sourceArray) {
     return sourceArray;
 }
 function Start() {
+
+     var fiveMinutes = 60 *5
+    display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+
+
+
+
     var random = Math.floor(Math.random() * 10);
 var random1 = Math.floor(Math.random() * 10);
 var random2 = Math.floor(Math.random() * 10);
@@ -21,6 +29,7 @@ $.getJSON("game.json", function(json) {
     var answer4 =  [json[random3].first,json[random3].second,json[random3].third,json[random3].fourth]
     var mix = [json[random].first,json[random].second,json[random].third,json[random].Link,json[random1].first,json[random1].second,json[random1].third,json[random1].Link,json[random2].first,json[random2].second,json[random2].third,json[random2].Link,json[random3].first,json[random3].second,json[random3].third,json[random3].Link]
     var mixed = shuffle(mix);
+    var score =0;
     let skill_list = "";
     let i = 0;
     let check =[]
@@ -54,12 +63,18 @@ $.getJSON("game.json", function(json) {
             {
                 correct();
                 check=[];
+                score = score+1;
+                $("#score").text(score)
             }
             else
             {
                 incorrect();
                 check=[];
             }
+        }
+        if(score==4)
+        {
+            endgame()
         }
         
 });
@@ -160,4 +175,31 @@ function incorrect()
                     }
                 }
           }, 300);
+}
+
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+        if(timer==0)
+        {
+            endgame()
+        }
+    }, 1000);
+}
+
+function endgame()
+{
+     $(".test").addClass("hidden");
 }
