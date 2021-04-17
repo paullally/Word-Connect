@@ -30,6 +30,7 @@ $.getJSON("game.json", function(json) {
     var mix = [json[random].first,json[random].second,json[random].third,json[random].Link,json[random1].first,json[random1].second,json[random1].third,json[random1].Link,json[random2].first,json[random2].second,json[random2].third,json[random2].Link,json[random3].first,json[random3].second,json[random3].third,json[random3].Link]
     var mixed = shuffle(mix);
     var score =0;
+    var lives =3;
     let skill_list = "";
     let i = 0;
     let check =[]
@@ -70,9 +71,18 @@ $.getJSON("game.json", function(json) {
             {
                 incorrect();
                 check=[];
+                if(score>1)
+                {
+                    lives=lives-1
+                    $("#lives").text(lives)
+                }
             }
         }
         if(score==4)
+        {
+            endgame()
+        }
+        if(lives==0)
         {
             endgame()
         }
