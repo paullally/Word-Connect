@@ -60,13 +60,15 @@ $.getJSON("game.json", function(json) {
     let i = 0;
     let check =[]
     mixed.map(() => {
-        list += "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +
+        list += "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 card my-4 d-flex justify-content-center text-center z-depth-5'>" +
             mixed[i] +
             "</div>" ;
         i += 1;
     });
-     $("#start").addClass("hidden");
+     $("#start").hide();
+      $(".game").hide();
     $(".game").append(list);
+    $(".game").fadeIn(2000);
     $(".card").click(function() {
         if( $(this).css("background-color")=="rgb(135, 206, 250)")
         {
@@ -202,13 +204,18 @@ function incorrect()
 
 function guesslink1()
 {
-$(".game").empty()
+    $(".game").fadeOut(1000)
+    setTimeout(function(){
+        $(".game").empty()
      $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[0] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[3] +"</div>"+
       "<input type='text' id='myInput'>"+
-    "<button type='button' onclick='checklink1();'>Get Value</button>");
+    "<button type='button'  class='btn btn-secondary btn-lg my-5'onclick='checklink1();'>Get Value</button>");
+    
+    $(".game").fadeIn()
+         }, 1000);
 }
  function checklink1(){
             var inputVal = document.getElementById("myInput").value;
@@ -222,12 +229,14 @@ $(".game").empty()
 function guesslink2()
 {
 $(".game").empty()
+$(".game").hide()
      $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[0] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[3] +"</div>"+
       "<input type='text' id='myInput'>"+
-    "<button type='button' onclick='checklink2();'>Get Value</button>");
+    "<button type='button'  class='btn btn-secondary btn-lg my-5'onclick='checklink1();'>Get Value</button>");
+    $(".game").fadeIn()
 }
  function checklink2(){
             var inputVal = document.getElementById("myInput").value;
@@ -241,12 +250,14 @@ $(".game").empty()
 function guesslink3()
 {
 $(".game").empty()
+$(".game").hide()
      $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[0] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[3] +"</div>"+
       "<input type='text' id='myInput'>"+
-    "<button type='button' onclick='checklink3();'>Get Value</button>");
+    "<button type='button'  class='btn btn-secondary btn-lg my-5'onclick='checklink1();'>Get Value</button>");
+    $(".game").fadeIn()
 }
  function checklink3(){
             var inputVal = document.getElementById("myInput").value;
@@ -260,12 +271,14 @@ $(".game").empty()
 function guesslink4()
 {
 $(".game").empty()
+$(".game").hide()
      $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[0] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[3] +"</div>"+
       "<input type='text' id='myInput'>"+
-    "<button type='button' onclick='checklink4();'>Get Value</button>");
+    "<button type='button'  class='btn btn-secondary btn-lg my-5'onclick='checklink1();'>Get Value</button>");
+     $(".game").fadeIn()
 }
  function checklink4(){
             var inputVal = document.getElementById("myInput").value;

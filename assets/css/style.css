@@ -1,11 +1,16 @@
 .container
 {
     
-    background-color: #000080;
+    background-color: #080C75;
     margin-top: 130px;
     min-height: 300px;
     
 }
+.game
+{
+    min-height: 700px;
+}
+
 .card 
 {
     background-color: 	#87CEFA;
@@ -13,7 +18,7 @@
       width: 100px;
       margin-left: 1.5rem;
       margin-right: 1.5rem;
-
+    
 }
 .test
 {
