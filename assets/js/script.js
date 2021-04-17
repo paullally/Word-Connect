@@ -12,7 +12,7 @@ function shuffle(sourceArray) {
 }
 function Startgame()
 {
-    fiveMinutes = 60*5,
+    fiveMinutes = 60 * 5
     display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
     Start();
@@ -31,7 +31,7 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         display.textContent = minutes + ":" + seconds;
-        if (--timer < 0) {
+        if (--timer < 0|| score==4||lives==0) {
            clearInterval(test);
            guesslink1()
         }
@@ -60,7 +60,7 @@ $.getJSON("game.json", function(json) {
     let i = 0;
     let check =[]
     mixed.map(() => {
-        list += "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +
+        list += "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +
             mixed[i] +
             "</div>" ;
         i += 1;
@@ -68,14 +68,14 @@ $.getJSON("game.json", function(json) {
      $("#start").addClass("hidden");
     $(".game").append(list);
     $(".card").click(function() {
-        if( $(this).css("background-color")=="rgb(128, 128, 128)")
+        if( $(this).css("background-color")=="rgb(135, 206, 250)")
         {
             check.push(this.innerHTML)
              $(this).css("background-color", "yellow");
         }
         else if ( $(this).css("background-color")=="rgb(255, 255, 0)")
         {
-            $(this).css("background-color", "grey");
+            $(this).css("background-color", "rgb(135, 206, 250)");
              check.pop(this.innerHTML)
         }   
         if(check.length==4)
@@ -101,15 +101,7 @@ $.getJSON("game.json", function(json) {
                     $("#lives").text(lives)
                 }
             }
-        }
-        if(score==4)
-        {
-             guesslink1()
-        }
-        if(lives==0)
-        {
-             guesslink1()
-        }       
+        }      
 });
 });
 }
@@ -202,7 +194,7 @@ function incorrect()
                 {
                     if($(".card").eq(i).css("background-color")=="rgb(255, 255, 0)")
                     {
-                          $(".card").eq(i).css("background-color","grey")
+                          $(".card").eq(i).css("background-color","rgb(135, 206, 250)")
                     }
                 }
           }, 300);
@@ -211,10 +203,10 @@ function incorrect()
 function guesslink1()
 {
 $(".game").empty()
-     $(".game").append( "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[0] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[1] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[2] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[3] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[0] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[1] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[2] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[3] +"</div>"+
       "<input type='text' id='myInput'>"+
     "<button type='button' onclick='checklink1();'>Get Value</button>");
 }
@@ -230,10 +222,10 @@ $(".game").empty()
 function guesslink2()
 {
 $(".game").empty()
-     $(".game").append( "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer2[0] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer2[1] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer2[2] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer2[3] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[0] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[1] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[2] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[3] +"</div>"+
       "<input type='text' id='myInput'>"+
     "<button type='button' onclick='checklink2();'>Get Value</button>");
 }
@@ -249,10 +241,10 @@ $(".game").empty()
 function guesslink3()
 {
 $(".game").empty()
-     $(".game").append( "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer3[0] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer3[1] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer3[2] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer3[3] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[0] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[1] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[2] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[3] +"</div>"+
       "<input type='text' id='myInput'>"+
     "<button type='button' onclick='checklink3();'>Get Value</button>");
 }
@@ -268,10 +260,10 @@ $(".game").empty()
 function guesslink4()
 {
 $(".game").empty()
-     $(".game").append( "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer4[0] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer4[1] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer4[2] +"</div>"+
-     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer4[3] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[0] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[1] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[2] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[3] +"</div>"+
       "<input type='text' id='myInput'>"+
     "<button type='button' onclick='checklink4();'>Get Value</button>");
 }

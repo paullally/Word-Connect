@@ -11,12 +11,21 @@
     <title>Document</title>
 </head>
 <body>
-      <div>Time Remaing: <span id="time">05:00</span>minutes</div>
-      <div>Score: <span id="score">0</span></div>
-      <div>Lives: <span id="lives">3</span></div>
     <div class="container">
-        <div class="row game">
-            <button type="button" class="btn btn-secondary btn-lg " id="start" onclick="Startgame()">Play</button>
+        <div class="results">
+       <div class="row">
+           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 d-flex justify-content-center">
+                <div class="test">Time Remaing: <span id="time">05:00</span>minutes</div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 d-flex justify-content-center">
+               <div  class="test">Score: <span id="score">0</span></div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 d-flex justify-content-center">
+                <div  class="test">Lives: <span id="lives">3</span></div>
+           </div>
+       </div>
+        <div class="row game d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary btn-lg my-5 " id="start" onclick="Startgame()">Play</button>
         </div>
        
     </div>
