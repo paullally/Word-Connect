@@ -1,4 +1,5 @@
-
+var counter =0;
+var score =0;
 function shuffle(sourceArray) {
     for (var i = 0; i < sourceArray.length - 1; i++) {
         var j = i + Math.floor(Math.random() * (sourceArray.length - i));
@@ -10,39 +11,36 @@ function shuffle(sourceArray) {
     return sourceArray;
 }
 function Start() {
-
-     var fiveMinutes = 60 *5
-    display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-
-
-
-
-    var random = Math.floor(Math.random() * 10);
+var fiveMinutes = 60 *5
+display = document.querySelector('#time');
+startTimer(fiveMinutes, display);
+var random = Math.floor(Math.random() * 10);
 var random1 = Math.floor(Math.random() * 10);
 var random2 = Math.floor(Math.random() * 10);
 var random3 = Math.floor(Math.random() * 10);
 $.getJSON("game.json", function(json) {
-    var answer1 = [json[random].first,json[random].second,json[random].third,json[random].fourth]
-    var answer2 = [json[random1].first,json[random1].second,json[random1].third,json[random1].fourth]
-    var answer3 = [json[random2].first,json[random2].second,json[random2].third,json[random2].fourth]
-    var answer4 =  [json[random3].first,json[random3].second,json[random3].third,json[random3].fourth]
+     window.answer1 = [json[random].first,json[random].second,json[random].third,json[random].fourth]
+    window.link1 = json[random].Link
+    window.answer2 = [json[random1].first,json[random1].second,json[random1].third,json[random1].fourth]
+    window.link2 = json[random1].link
+    window.answer3 = [json[random2].first,json[random2].second,json[random2].third,json[random2].fourth]
+    window.link3 = json[random3].link
+    window.answer4 =  [json[random3].first,json[random3].second,json[random3].third,json[random3].fourth]
+    window.link4 = json[random3].link
     var mix = [json[random].first,json[random].second,json[random].third,json[random].Link,json[random1].first,json[random1].second,json[random1].third,json[random1].Link,json[random2].first,json[random2].second,json[random2].third,json[random2].Link,json[random3].first,json[random3].second,json[random3].third,json[random3].Link]
     var mixed = shuffle(mix);
-    var score =0;
     var lives =3;
-    let skill_list = "";
+    let list = "";
     let i = 0;
     let check =[]
     mixed.map(() => {
-        skill_list += "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +
+        list += "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +
             mixed[i] +
             "</div>" ;
         i += 1;
-
     });
      $("#start").addClass("hidden");
-    $(".test").append(skill_list);
+    $(".game").append(list);
     $(".card").click(function() {
         if( $(this).css("background-color")=="rgb(128, 128, 128)")
         {
@@ -80,17 +78,15 @@ $.getJSON("game.json", function(json) {
         }
         if(score==4)
         {
-            endgame()
+             guesslink1()
         }
         if(lives==0)
         {
-            endgame()
-        }
-        
+             guesslink1()
+        }       
 });
 });
 }
-
 function checkanswer1(check,answer1)
 {
     var count =0;
@@ -162,7 +158,6 @@ function checkanswer4(check,answer4)
         }
         return false;
 }
-
 function correct()
 {
                 for(var i =0; i<17; i++)
@@ -170,7 +165,7 @@ function correct()
                     if($(".card").eq(i).css("background-color")=="rgb(255, 255, 0)")
                     {
                          $(".card").eq(i).css("background-color","green")
-                          $(".test").prepend( $(".card").eq(i));
+                          $(".game").prepend( $(".card").eq(i));
                     }
                 }
 }
@@ -186,8 +181,6 @@ function incorrect()
                 }
           }, 300);
 }
-
-
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -204,12 +197,87 @@ function startTimer(duration, display) {
         }
         if(timer==0)
         {
-            endgame()
+             guesslink1()
         }
     }, 1000);
 }
 
-function endgame()
+function guesslink1()
 {
-     $(".test").addClass("hidden");
+$(".game").empty()
+     $(".game").append( "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[0] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[1] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[2] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[3] +"</div>"+
+      "<input type='text' id='myInput'>"+
+    "<button type='button' onclick='checklink1();'>Get Value</button>");
+
+
 }
+ function checklink1(){
+            var inputVal = document.getElementById("myInput").value;
+            if(inputVal==link1)
+            {
+                score=score+1
+                $("#score").text(score)
+            }
+            guesslink2()
+        }
+function guesslink2()
+{
+$(".game").empty()
+     $(".game").append( "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer2[0] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer2[1] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer2[2] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer2[3] +"</div>"+
+      "<input type='text' id='myInput'>"+
+    "<button type='button' onclick='checklink2();'>Get Value</button>");
+}
+ function checklink2(){
+            var inputVal = document.getElementById("myInput").value;
+            if(inputVal==link1)
+            {
+                score=score+1
+                $("#score").text(score)
+            }
+            guesslink3()
+        }
+function guesslink3()
+{
+$(".game").empty()
+     $(".game").append( "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer3[0] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer3[1] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer3[2] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer3[3] +"</div>"+
+      "<input type='text' id='myInput'>"+
+    "<button type='button' onclick='checklink3();'>Get Value</button>");
+}
+ function checklink3(){
+            var inputVal = document.getElementById("myInput").value;
+            if(inputVal==link1)
+            {
+                score=score+1
+                $("#score").text(score)
+            }
+            guesslink4()
+        }
+
+
+function guesslink4()
+{
+$(".game").empty()
+     $(".game").append( "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer4[0] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer4[1] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer4[2] +"</div>"+
+     "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer4[3] +"</div>"+
+      "<input type='text' id='myInput'>"+
+    "<button type='button' onclick='checklink4();'>Get Value</button>");
+}
+ function checklink4(){
+            var inputVal = document.getElementById("myInput").value;
+            if(inputVal==link1)
+            {
+                score=score+1
+                $("#score").text(score)
+            }
+        }
