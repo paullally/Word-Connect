@@ -1,6 +1,5 @@
 var counter =0;
 var score =0;
-var timer;
 function shuffle(sourceArray) {
     for (var i = 0; i < sourceArray.length - 1; i++) {
         var j = i + Math.floor(Math.random() * (sourceArray.length - i));
@@ -13,7 +12,7 @@ function shuffle(sourceArray) {
 }
 function Startgame()
 {
-    fiveMinutes = 10,
+    fiveMinutes = 60*5,
     display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
     Start();
@@ -26,22 +25,17 @@ function Reset()
 function startTimer(duration, display) {
     timer = duration;
     var minutes, seconds;
-    let count=0;
-    setInterval(function () {
+    var test= setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         display.textContent = minutes + ":" + seconds;
-
         if (--timer < 0) {
-           display.textContent = 0 + ":" + 0;
-            guesslink1();
+           clearInterval(test);
+           guesslink1()
         }
     }, 1000);
-}
-function resetTimer() {
-  timer = 15;
 }
 function Start() 
 {
@@ -294,5 +288,5 @@ function gameover()
 {
     $(".game").empty()
     timer=0
-    $(".game").append("<button type='button' onclick='Reset();'>Get Value</button>")
+    $(".game").append("<button type='button' onclick='Startgame();'>Get Value</button>")
 }
