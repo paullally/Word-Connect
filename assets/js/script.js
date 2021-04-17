@@ -1,5 +1,6 @@
 var counter =0;
 var score =0;
+var timer;
 function shuffle(sourceArray) {
     for (var i = 0; i < sourceArray.length - 1; i++) {
         var j = i + Math.floor(Math.random() * (sourceArray.length - i));
@@ -10,23 +11,54 @@ function shuffle(sourceArray) {
     }
     return sourceArray;
 }
-function Start() {
-var fiveMinutes = 60 *5
-display = document.querySelector('#time');
-startTimer(fiveMinutes, display);
+function Startgame()
+{
+    fiveMinutes = 10,
+    display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+    Start();
+}
+function Reset()
+{
+    resetTimer()
+    Start()
+}
+function startTimer(duration, display) {
+    timer = duration;
+    var minutes, seconds;
+    let count=0;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+           display.textContent = 0 + ":" + 0;
+            guesslink1();
+        }
+    }, 1000);
+}
+function resetTimer() {
+  timer = 15;
+}
+function Start() 
+{
+ $(".game").empty()
 var random = Math.floor(Math.random() * 10);
 var random1 = Math.floor(Math.random() * 10);
 var random2 = Math.floor(Math.random() * 10);
 var random3 = Math.floor(Math.random() * 10);
 $.getJSON("game.json", function(json) {
-     window.answer1 = [json[random].first,json[random].second,json[random].third,json[random].fourth]
+    window.answer1 = [json[random].first,json[random].second,json[random].third,json[random].fourth]
     window.link1 = json[random].Link
     window.answer2 = [json[random1].first,json[random1].second,json[random1].third,json[random1].fourth]
-    window.link2 = json[random1].link
+    window.link2 = json[random1].Link
     window.answer3 = [json[random2].first,json[random2].second,json[random2].third,json[random2].fourth]
-    window.link3 = json[random3].link
+    window.link3 = json[random3].Link
     window.answer4 =  [json[random3].first,json[random3].second,json[random3].third,json[random3].fourth]
-    window.link4 = json[random3].link
+    window.link4 = json[random3].Link
     var mix = [json[random].first,json[random].second,json[random].third,json[random].Link,json[random1].first,json[random1].second,json[random1].third,json[random1].Link,json[random2].first,json[random2].second,json[random2].third,json[random2].Link,json[random3].first,json[random3].second,json[random3].third,json[random3].Link]
     var mixed = shuffle(mix);
     var lives =3;
@@ -181,26 +213,6 @@ function incorrect()
                 }
           }, 300);
 }
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-        if(timer==0)
-        {
-             guesslink1()
-        }
-    }, 1000);
-}
 
 function guesslink1()
 {
@@ -211,8 +223,6 @@ $(".game").empty()
      "<div class='col-lg-3 col-md-3 col-sm-3 col-xs-3 my-3 card'>" +answer1[3] +"</div>"+
       "<input type='text' id='myInput'>"+
     "<button type='button' onclick='checklink1();'>Get Value</button>");
-
-
 }
  function checklink1(){
             var inputVal = document.getElementById("myInput").value;
@@ -235,7 +245,7 @@ $(".game").empty()
 }
  function checklink2(){
             var inputVal = document.getElementById("myInput").value;
-            if(inputVal==link1)
+            if(inputVal==link2)
             {
                 score=score+1
                 $("#score").text(score)
@@ -254,15 +264,13 @@ $(".game").empty()
 }
  function checklink3(){
             var inputVal = document.getElementById("myInput").value;
-            if(inputVal==link1)
+            if(inputVal==link3)
             {
                 score=score+1
                 $("#score").text(score)
             }
             guesslink4()
         }
-
-
 function guesslink4()
 {
 $(".game").empty()
@@ -275,9 +283,16 @@ $(".game").empty()
 }
  function checklink4(){
             var inputVal = document.getElementById("myInput").value;
-            if(inputVal==link1)
+            if(inputVal==link4)
             {
                 score=score+1
                 $("#score").text(score)
             }
+            gameover()
         }
+function gameover()
+{
+    $(".game").empty()
+    timer=0
+    $(".game").append("<button type='button' onclick='Reset();'>Get Value</button>")
+}
