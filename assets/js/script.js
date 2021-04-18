@@ -212,7 +212,7 @@ function guesslink1()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[3] +"</div>"+
-      "<form class='form-inline'>"+
+      "<form class='form-inline mb-5'>"+
         "<div class='form-group'>"+
         "<input type='text' class='form-control' id='myInput'>"+
         "</div>"+
@@ -312,7 +312,9 @@ function gameover()
 {
     $(".game").empty()
     timer=0
-    $(".game").append(" <h1 class='text-center>Game Over</h1><h3>Your Score :</h3><button type='button' class='btn btn-secondary btn-lg my-5 buttons my-5' onclick='Startgame()'>Play</button>")
+    $(".game").append("<h1 class=' col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center endtext my-3'>Game Over</h1><br><br>"+
+    "<h1 class='text-center endtext my-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'>You Scored: "+score+"</h1>"+"<br><br>"+
+    "<button type='button' class='btn btn-secondary btn-lg my-5 buttons my-3' onclick='Startgame()'>Play</button>")
 }
 
 

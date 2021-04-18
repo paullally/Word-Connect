@@ -9,10 +9,12 @@
 .game
 {
     min-height: 650px;
+    
 }
 .buttons
 {
-    height:20%
+    height:20%;
+   vertical-align: middle
 }
 .card 
 {
@@ -24,6 +26,10 @@
     
 }
 .test
+{
+    color:white
+}
+.endtext
 {
     color:white
 }
