@@ -1,5 +1,6 @@
 var counter =0;
 var score =0;
+var lives =3;
 function shuffle(sourceArray) {
     for (var i = 0; i < sourceArray.length - 1; i++) {
         var j = i + Math.floor(Math.random() * (sourceArray.length - i));
@@ -33,7 +34,8 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
         if (--timer < 0|| score==4||lives==0) {
            clearInterval(test);
-           guesslink1()
+           guesslink1();
+           console.log("ASDASDAS")
         }
     }, 1000);
 }
@@ -55,7 +57,6 @@ $.getJSON("game.json", function(json) {
     window.link4 = json[random3].Link
     var mix = [json[random].first,json[random].second,json[random].third,json[random].Link,json[random1].first,json[random1].second,json[random1].third,json[random1].Link,json[random2].first,json[random2].second,json[random2].third,json[random2].Link,json[random3].first,json[random3].second,json[random3].third,json[random3].Link]
     var mixed = shuffle(mix);
-    var lives =3;
     let list = "";
     let i = 0;
     let check =[]
@@ -211,8 +212,14 @@ function guesslink1()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[3] +"</div>"+
-      "<input type='text' id='myInput'>"+
-    "<button type='button'  class='btn btn-secondary btn-lg my-5'onclick='checklink1();'>Get Value</button>");
+      "<form class='form-inline'>"+
+        "<div class='form-group'>"+
+        "<input type='text' class='form-control' id='myInput'>"+
+        "</div>"+
+        "<button type='button'  class='btn btn-default'  onclick='checklink1();'>Check</button>"+
+        "</form>");
+
+    
     
     $(".game").fadeIn()
          }, 1000);
@@ -234,8 +241,12 @@ $(".game").hide()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[3] +"</div>"+
-      "<input type='text' id='myInput'>"+
-    "<button type='button'  class='btn btn-secondary btn-lg my-5'onclick='checklink1();'>Get Value</button>");
+      "<form class='form-inline'>"+
+        "<div class='form-group'>"+
+        "<input type='text' class='form-control' id='myInput'>"+
+        "</div>"+
+        "<button type='button'  class='btn btn-default'  onclick='checklink2();'>Check</button>"+
+        "</form>");
     $(".game").fadeIn()
 }
  function checklink2(){
@@ -255,8 +266,12 @@ $(".game").hide()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[3] +"</div>"+
-      "<input type='text' id='myInput'>"+
-    "<button type='button'  class='btn btn-secondary btn-lg my-5'onclick='checklink1();'>Get Value</button>");
+    "<form class='form-inline'>"+
+        "<div class='form-group'>"+
+        "<input type='text' class='form-control' id='myInput'>"+
+        "</div>"+
+        "<button type='button'  class='btn btn-default'  onclick='checklink3();'>Check</button>"+
+        "</form>");
     $(".game").fadeIn()
 }
  function checklink3(){
@@ -276,8 +291,12 @@ $(".game").hide()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[3] +"</div>"+
-      "<input type='text' id='myInput'>"+
-    "<button type='button'  class='btn btn-secondary btn-lg my-5'onclick='checklink1();'>Get Value</button>");
+     "<form class='form-inline'>"+
+        "<div class='form-group'>"+
+        "<input type='text' class='form-control' id='myInput'>"+
+        "</div>"+
+        "<button type='button'  class='btn btn-default'  onclick='checklink4();'>Check</button>"+
+        "</form>");
      $(".game").fadeIn()
 }
  function checklink4(){
@@ -293,5 +312,7 @@ function gameover()
 {
     $(".game").empty()
     timer=0
-    $(".game").append("<button type='button' onclick='Startgame();'>Get Value</button>")
+    $(".game").append(" <h1 class='text-center>Game Over</h1><h3>Your Score :</h3><button type='button' class='btn btn-secondary btn-lg my-5 buttons my-5' onclick='Startgame()'>Play</button>")
 }
+
+

@@ -8,13 +8,16 @@
 }
 .game
 {
-    min-height: 700px;
+    min-height: 650px;
 }
-
+.buttons
+{
+    height:20%
+}
 .card 
 {
     background-color: 	#87CEFA;
-      height: 75px;
+      height: 80px;
       width: 100px;
       margin-left: 1.5rem;
       margin-right: 1.5rem;
@@ -29,7 +32,6 @@
     visibility: hidden;
     display: none;
 }
-
 @media only screen and (max-width: 768px) {
   .card 
 {
