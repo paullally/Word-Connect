@@ -13,15 +13,35 @@
     <title>Document</title>
 </head>
 <body>
+     <nav class="navbar navbar-expand-lg navbar-dark">
+               <a class="navbar-brand" href="#">Word Connect</a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#">How To Play<span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Play Game</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Add Game</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+    
     <div class="container mt-5" >
        <div class="row top-line">
-           <div class="col-lg-2 offset-lg-1 col-md-4 col-sm-4 col-xs-4 ">
+           <div class="col-lg-2 offset-lg-1 col-md-4 col-sm-4 col-xs-4 d-flex justify-content-center">
                 <h5><span id="time">05:00</span></h5>
            </div>
-           <div class="col-lg-2 offset-lg-2 col-md-4 col-sm-4 col-xs-4 ">
+           <div class="col-lg-2 offset-lg-2 col-md-4 col-sm-4 col-xs-4  d-flex justify-content-center">
                <h5>Score: <span id="score">0</span></h5>
            </div>
-           <div class="col-lg-2 offset-lg-2 col-md-4 col-sm-4 col-xs-4">
+           <div class="col-lg-2 offset-lg-2 col-md-4 col-sm-4 col-xs-4 d-flex justify-content-center">
                 <h5 >Lives:   <i class="fas fa-heart 1"></i>   <i class="fas fa-heart 2"></i>   <i class="fas fa-heart 3"></i></h5>
            </div>
         </div>
@@ -36,6 +56,36 @@
            
         </div>
     </div>
+     <footer class="container-fluid  pt-4 pb-2">
+            <div class="row">
+               <div class="col-sm-4">
+                  <h5 class="footer-text">© 2021 Copyright: Word Connect</h5>
+               </div>
+               <div class="col-sm-4 offse ">
+                  <h5 class="footer-text">Social Media:</h5>
+                  <ul class="list-inline social-links">
+                     <li class="list-inline-item">
+                        <a target="_blank" href="https://www.facebook.com/">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                        </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a target="_blank" href="https://twitter.com/">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <span class="sr-only">Twiitter</span>
+                        </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a target="_blank" href="https://www.instagram.com/">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </footer>
  <!-- JQuery -->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Bootstrap tooltips -->

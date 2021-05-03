@@ -9,7 +9,39 @@
   --green:#99C24D;
   --black: #2F2D2E;
 }
+* {
+ box-sizing: border-box;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+.main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
 
+
+
+
+
+footer
+{
+    background-color: var(--charcoal);
+}
 
 
 .container
@@ -19,6 +51,14 @@
     padding:3rem;
     min-height: 40.625em;
     
+}
+.navbar
+{
+    background-color: var(--charcoal);
+}
+.navbar-brand
+{
+     font-family: "Press Start 2P";
 }
 
 .btn
@@ -76,33 +116,8 @@ h3
 {
     color: red;
 }
-@media only screen and (max-width: 768px) {
-  .card 
-{
-      margin-left: 1rem;
-      margin-right: 1rem;
 
+.form-control:focus {
+  border-color: var(--orange-p);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--orange-p);
 }
-}
-
-
-@media only screen and (max-width: 528px) {
-  .card 
-{
-    
-      margin-left: 0.5rem;
-      margin-right:0.5rem;
-
-}
-}
-@media only screen and (max-width: 464px) {
-  .card 
-{
-    background-color: grey;
-      margin-left: 0.05rem;
-      margin-right:0.rem;
-
-}
-}
-
-

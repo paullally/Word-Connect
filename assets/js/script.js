@@ -302,7 +302,7 @@ function guesslink4()
 {
 $(".game").empty()
 $(".game").hide()
-     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[0] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3 card d-flex justify-content-center text-center z-depth-5'>" +answer4[0] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[3] +"</div>"+
