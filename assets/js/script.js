@@ -71,14 +71,14 @@ $.getJSON("game.json", function(json) {
     $(".game").append(list);
     $(".game").fadeIn(2000);
     $(".card").click(function() {
-        if( $(this).css("background-color")=="rgb(135, 206, 250)")
+        if( $(this).css("background-color")=="rgb(255, 255, 255)")
         {
             check.push(this.innerHTML)
              $(this).css("background-color", "yellow");
         }
         else if ( $(this).css("background-color")=="rgb(255, 255, 0)")
         {
-            $(this).css("background-color", "rgb(135, 206, 250)");
+            $(this).css("background-color", "rgb(255, 255, 255)");
              check.pop(this.innerHTML)
         }   
         if(check.length==4)
@@ -100,8 +100,24 @@ $.getJSON("game.json", function(json) {
                 check=[];
                 if(score>1)
                 {
-                    lives=lives-1
-                    $("#lives").text(lives)
+                    console.log("Asdasda")
+                    if(lives==3)
+                    {
+                         lives=lives-1
+                    $(".3").remove()
+                    }
+                    else if(lives==2)
+                    {
+                        
+                         lives=lives-1
+                    $(".2").remove()
+                    }
+                    else
+                    {
+                          lives=lives-1
+                        $(".1").remove()                        
+                    }
+                   
                 }
             }
         }      
@@ -185,7 +201,7 @@ function correct()
                 {
                     if($(".card").eq(i).css("background-color")=="rgb(255, 255, 0)")
                     {
-                         $(".card").eq(i).css("background-color","green")
+                         $(".card").eq(i).css("background-color","rgb(153, 194, 77)")
                           $(".game").prepend( $(".card").eq(i));
                     }
                 }
@@ -197,7 +213,7 @@ function incorrect()
                 {
                     if($(".card").eq(i).css("background-color")=="rgb(255, 255, 0)")
                     {
-                          $(".card").eq(i).css("background-color","rgb(135, 206, 250)")
+                          $(".card").eq(i).css("background-color","rgb(255, 255, 255)")
                     }
                 }
           }, 300);
