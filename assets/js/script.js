@@ -1,4 +1,3 @@
-var counter =0;
 var score =0;
 var lives =3;
 function shuffle(sourceArray) {
@@ -13,15 +12,16 @@ function shuffle(sourceArray) {
 }
 function Startgame()
 {
+    score=0
+    lives=3
+     $(".1").css("color", "rgb(255, 0, 0)"); 
+     $(".2").css("color", "rgb(255, 0, 0)"); 
+     $(".3").css("color", "rgb(255, 0, 0)"); 
+      $("#score").text(score);
     fiveMinutes = 60 * 5
     display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
     Start();
-}
-function Reset()
-{
-    resetTimer()
-    Start()
 }
 function startTimer(duration, display) {
     timer = duration;
