@@ -35,7 +35,6 @@ function startTimer(duration, display) {
         if (--timer < 0|| score==4||lives==0) {
            clearInterval(test);
            guesslink1();
-           console.log("ASDASDAS")
         }
     }, 1000);
 }
@@ -74,9 +73,9 @@ $.getJSON("game.json", function(json) {
         if( $(this).css("background-color")=="rgb(255, 255, 255)")
         {
             check.push(this.innerHTML)
-             $(this).css("background-color", "yellow");
+             $(this).css("background-color", "rgb(4, 139, 168)");
         }
-        else if ( $(this).css("background-color")=="rgb(255, 255, 0)")
+        else if ( $(this).css("background-color")=="rgb(4, 139, 168)")
         {
             $(this).css("background-color", "rgb(255, 255, 255)");
              check.pop(this.innerHTML)
@@ -199,7 +198,7 @@ function correct()
 {
                 for(var i =0; i<17; i++)
                 {
-                    if($(".card").eq(i).css("background-color")=="rgb(255, 255, 0)")
+                    if($(".card").eq(i).css("background-color")=="rgb(4, 139, 168)")
                     {
                          $(".card").eq(i).css("background-color","rgb(153, 194, 77)")
                           $(".game").prepend( $(".card").eq(i));
@@ -211,7 +210,7 @@ function incorrect()
      setTimeout(function(){
           for(var i =0; i<17; i++)
                 {
-                    if($(".card").eq(i).css("background-color")=="rgb(255, 255, 0)")
+                    if($(".card").eq(i).css("background-color")=="rgb(4, 139, 168)")
                     {
                           $(".card").eq(i).css("background-color","rgb(255, 255, 255)")
                     }
@@ -228,11 +227,11 @@ function guesslink1()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[3] +"</div>"+
-      "<form class='form-inline mb-5'>"+
-        "<div class='form-group'>"+
+      "<form class='form-inline my-5'>"+
+        "<div class='form-group my-5'>"+
         "<input type='text' class='form-control' id='myInput'>"+
         "</div>"+
-        "<button type='button'  class='btn btn-default'  onclick='checklink1();'>Check</button>"+
+        "<button type='button'  class='btn'  onclick='checklink1();'>Check</button>"+
         "</form>");
 
     
@@ -257,11 +256,11 @@ $(".game").hide()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[3] +"</div>"+
-      "<form class='form-inline'>"+
-        "<div class='form-group'>"+
+      "<form class='form-inline my-5'>"+
+        "<div class='form-group my-5'>"+
         "<input type='text' class='form-control' id='myInput'>"+
         "</div>"+
-        "<button type='button'  class='btn btn-default'  onclick='checklink2();'>Check</button>"+
+        "<button type='button'  class='btn'  onclick='checklink2();'>Check</button>"+
         "</form>");
     $(".game").fadeIn()
 }
@@ -282,11 +281,11 @@ $(".game").hide()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[3] +"</div>"+
-    "<form class='form-inline'>"+
-        "<div class='form-group'>"+
+    "<form class='form-inline my-5'>"+
+        "<div class='form-group my-5'>"+
         "<input type='text' class='form-control' id='myInput'>"+
         "</div>"+
-        "<button type='button'  class='btn btn-default'  onclick='checklink3();'>Check</button>"+
+        "<button type='button'  class='btn'  onclick='checklink3();'>Check</button>"+
         "</form>");
     $(".game").fadeIn()
 }
@@ -307,11 +306,11 @@ $(".game").hide()
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[1] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[2] +"</div>"+
      "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[3] +"</div>"+
-     "<form class='form-inline'>"+
-        "<div class='form-group'>"+
+     "<form class='form-inline my-5'>"+
+        "<div class='form-group my-5'>"+
         "<input type='text' class='form-control' id='myInput'>"+
         "</div>"+
-        "<button type='button'  class='btn btn-default'  onclick='checklink4();'>Check</button>"+
+        "<button type='button'  class='btn'  onclick='checklink4();'>Check</button>"+
         "</form>");
      $(".game").fadeIn()
 }
@@ -328,9 +327,9 @@ function gameover()
 {
     $(".game").empty()
     timer=0
-    $(".game").append("<h1 class=' col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center endtext my-3'>Game Over</h1><br><br>"+
-    "<h1 class='text-center endtext my-3 col-lg-12 col-md-12 col-sm-12 col-xs-12'>You Scored: "+score+"</h1>"+"<br><br>"+
-    "<button type='button' class='btn btn-secondary btn-lg my-5 buttons my-3' onclick='Startgame()'>Play</button>")
+    $(".game").append("<h1 class=' col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center my-5'>Game Over</h1><br><br>"+
+    "<h1 class='text-center my-5 col-lg-12 col-md-12 col-sm-12 col-xs-12'>You Scored: "+score+"</h1>"+"<br><br>"+
+    "<button type='button' class='btn my-5' onclick='Startgame()'>Play Again</button>")
 }
 
 
