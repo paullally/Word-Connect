@@ -104,18 +104,18 @@ $.getJSON("game.json", function(json) {
                     if(lives==3)
                     {
                          lives=lives-1
-                    $(".3").remove()
+                         $(".3").css("color", "rgb(0, 0, 0)");
                     }
                     else if(lives==2)
                     {
                         
                          lives=lives-1
-                    $(".2").remove()
+                         $(".2").css("color", "rgb(0, 0, 0)");
                     }
                     else
                     {
                           lives=lives-1
-                        $(".1").remove()                        
+                         $(".1").css("color", "rgb(0, 0, 0)");                    
                     }
                    
                 }

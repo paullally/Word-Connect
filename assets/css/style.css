@@ -72,6 +72,10 @@ h3
     visibility: hidden;
     display: none;
 }
+.fa-heart
+{
+    color: red;
+}
 @media only screen and (max-width: 768px) {
   .card 
 {
