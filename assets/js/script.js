@@ -346,3 +346,19 @@ if ($('.smart-scroll').length > 0) { // check if element exists
         last_scroll_top = scroll_top;
     });
 }
+
+
+
+
+
+
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw1SsCEX4L-RWIsgLhFg7jccwWq4_0esKMr1m__o3l2OPcKzMRWZAZqQLzivjeeFJ07/exec'
+            const form = document.forms['google-sheet']
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("ASDASDASDAS"))
+                .catch(error => console.error('Error!', error.message))
+            });

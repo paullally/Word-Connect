@@ -15,7 +15,7 @@
 <body>
     <div class="main-container">
      <nav class="navbar navbar-expand-lg navbar-dark smart-scroll ">
-               <a class="navbar-brand" href="#">Word Connect</a>
+               <a class="navbar-brand" href="index.html">Word Connect</a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
@@ -36,22 +36,22 @@
        <section id="create">
           <div class="container mt-5" >
               <h1 class="text-center ">Create Game</h1>
-              <form>
+              <form method="post" autocomplete="off" name="google-sheet" id="myForm">
 <div class="row d-flex justify-content-center">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Word One">
+      <input type="text" class="form-control" placeholder="Word One" name="Word_1">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-       <input type="text" class="form-control" placeholder="Word Two">
+       <input type="text" class="form-control" placeholder="Word Two" name="Word_2">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Word Three">
+      <input type="text" class="form-control" placeholder="Word Three" name="Word_3">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-       <input type="text" class="form-control" placeholder="Word Four">
+       <input type="text" class="form-control" placeholder="Word Four" name="Word_4">
     </div>
      <div class="col-lg-6 offset-lg-3  col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Link One" >
+      <input type="text" class="form-control" placeholder="Link One" name="Link_1" >
     </div>
     <div class="col-lg-3  col-md-6 col-sm-6 col-xs-6 my-5 test">
       <input type="text" class="form-control" placeholder="asdasdasdadasd" >
@@ -60,19 +60,19 @@
 
 
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Word Five">
+      <input type="text" class="form-control" placeholder="Word Five" name="Word_5">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-       <input type="text" class="form-control" placeholder="Word Six">
+       <input type="text" class="form-control" placeholder="Word Six" name="Word_6">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Word Seven">
+      <input type="text" class="form-control" placeholder="Word Seven" name="Word_7">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-       <input type="text" class="form-control" placeholder="Word Eight">
+       <input type="text" class="form-control" placeholder="Word Eight" name="Word_8">
     </div>
      <div class="col-lg-6 offset-lg-3  col-sm-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Link Two" >
+      <input type="text" class="form-control" placeholder="Link Two" name="Link_2">
     </div>
     <div class="col-lg-3  col-md-6 col-sm-6 col-xs-6 my-5 test">
       <input type="text" class="form-control"  >
@@ -81,19 +81,19 @@
 
 
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Word Nine">
+      <input type="text" class="form-control" placeholder="Word Nine" name="Word_9">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-       <input type="text" class="form-control" placeholder="Word Ten">
+       <input type="text" class="form-control" placeholder="Word Ten" name="Word_10">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Word Eleven">
+      <input type="text" class="form-control" placeholder="Word Eleven" name="Word_11">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-       <input type="text" class="form-control" placeholder="Word Twelve">
+       <input type="text" class="form-control" placeholder="Word Twelve" name="Word_12">
     </div>
      <div class="col-lg-6 offset-lg-3  col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Link Three" >
+      <input type="text" class="form-control" placeholder="Link Three" name="Link_3" >
     </div>
     <div class="col-lg-3  col-md-6 col-sm-6 col-xs-6 my-5 test">
       <input type="text" class="form-control" placeholder="asdasdasdadasd" >
@@ -102,25 +102,28 @@
 
 
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Word Thirteen">
+      <input type="text" class="form-control" placeholder="Word Thirteen" name="Word_13">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-       <input type="text" class="form-control" placeholder="Word Fourteen">
+       <input type="text" class="form-control" placeholder="Word Fourteen" name="Word_14">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Word Fifteen">
+      <input type="text" class="form-control" placeholder="Word Fifteen" name="Word_15">
     </div>
      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-3">
-       <input type="text" class="form-control" placeholder="Word Sixteen">
+       <input type="text" class="form-control" placeholder="Word Sixteen" name="Word_16">
     </div>
      <div class="col-lg-6 offset-lg-3   col-md-6 col-sm-6 col-xs-6 my-3">
-      <input type="text" class="form-control" placeholder="Link Four" >
+      <input type="text" class="form-control" placeholder="Link Four"  name="Link_4">
     </div>
     <div class="col-lg-3  col-md-6 col-sm-6 col-xs-6 my-5 test">
       <input type="text" class="form-control" placeholder="asdasdasdadasd" >
     </div>
     
   </div>
+  <div class="form-group d-flex justify-content-center ">
+          <button type="submit" value="Submit" class="btn mt-5 submit">Submit!</button>
+            </div>
 </form>
           </div>
       </section>
