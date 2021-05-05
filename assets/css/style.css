@@ -20,20 +20,26 @@ html,
 body {
  height: 100%;
  position: relative;
- background-color: #9FA2B2;
+ background-color: #f1faee;
 }
-section
-{
-    height: 100vh;
+.main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
 }
-footer
-{
-    background-color: var(--charcoal);
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ background-color: var(--charcoal);
 }
 
 .container
 {
-    margin-top: 100px!important;
+    margin-top: 200px!important;
+     margin-bottom: 200px!important;
     background-color: var(--charcoal);
     padding:3rem;
     min-height: 40.625em;
