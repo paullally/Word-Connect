@@ -60,15 +60,13 @@ $.getJSON("game.json", function(json) {
     let i = 0;
     let check =[]
     mixed.map(() => {
-        list += "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 card my-4 d-flex justify-content-center text-center z-depth-5'>" +
+        list += "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 card my-4 d-flex justify-content-center text-center z-depth-5 swirl-in-fwd'>" +
             mixed[i] +
             "</div>" ;
         i += 1;
     });
      $("#start").hide();
-      $(".game").hide();
     $(".game").append(list);
-    $(".game").fadeIn(2000);
     $(".card").click(function() {
         if( $(this).css("background-color")=="rgb(255, 255, 255)")
         {
@@ -99,7 +97,6 @@ $.getJSON("game.json", function(json) {
                 check=[];
                 if(score>1)
                 {
-                    console.log("Asdasda")
                     if(lives==3)
                     {
                          lives=lives-1
@@ -201,6 +198,7 @@ function correct()
                     if($(".card").eq(i).css("background-color")=="rgb(4, 139, 168)")
                     {
                          $(".card").eq(i).css("background-color","rgb(153, 194, 77)")
+                          $(".card").eq(i).addClass( "slide-in-top" );
                           $(".game").prepend( $(".card").eq(i));
                     }
                 }
@@ -223,10 +221,10 @@ function guesslink1()
     $(".game").fadeOut(1000)
     setTimeout(function(){
         $(".game").empty()
-     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[0] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[1] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[2] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer1[3] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer1[0] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer1[1] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer1[2] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer1[3] +"</div>"+
       "<form class='form-inline my-5'>"+
         "<div class='form-group my-5'>"+
         "<input type='text' class='form-control' id='myInput'>"+
@@ -252,10 +250,10 @@ function guesslink2()
 {
 $(".game").empty()
 $(".game").hide()
-     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[0] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[1] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[2] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer2[3] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer2[0] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer2[1] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer2[2] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer2[3] +"</div>"+
       "<form class='form-inline my-5'>"+
         "<div class='form-group my-5'>"+
         "<input type='text' class='form-control' id='myInput'>"+
@@ -277,10 +275,10 @@ function guesslink3()
 {
 $(".game").empty()
 $(".game").hide()
-     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[0] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[1] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[2] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer3[3] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer3[0] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer3[1] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer3[2] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer3[3] +"</div>"+
     "<form class='form-inline my-5'>"+
         "<div class='form-group my-5'>"+
         "<input type='text' class='form-control' id='myInput'>"+
@@ -302,10 +300,10 @@ function guesslink4()
 {
 $(".game").empty()
 $(".game").hide()
-     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3 card d-flex justify-content-center text-center z-depth-5'>" +answer4[0] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[1] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[2] +"</div>"+
-     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5'>" +answer4[3] +"</div>"+
+     $(".game").append( "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3 card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer4[0] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer4[1] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer4[2] +"</div>"+
+     "<div class='col-lg-2 col-md-2 col-sm-2 col-xs-2 my-3  card d-flex justify-content-center text-center z-depth-5 flip-in-hor-bottom'>" +answer4[3] +"</div>"+
      "<form class='form-inline my-5'>"+
         "<div class='form-group my-5'>"+
         "<input type='text' class='form-control' id='myInput'>"+
@@ -327,9 +325,9 @@ function gameover()
 {
     $(".game").empty()
     timer=0
-    $(".game").append("<h1 class=' col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center my-5'>Game Over</h1><br><br>"+
-    "<h1 class='text-center my-5 col-lg-12 col-md-12 col-sm-12 col-xs-12'>You Scored: "+score+"</h1>"+"<br><br>"+
-    "<button type='button' class='btn my-5' onclick='Startgame()'>Play Again</button>")
+    $(".game").append("<h1 class=' col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center my-5 bounce-in-top'>Game Over</h1><br><br>"+
+    "<h1 class='text-center my-5 col-lg-12 col-md-12 col-sm-12 col-xs-12 bounce-in-top'>You Scored: "+score+"</h1>"+"<br><br>"+
+    "<button type='button' class='btn my-5 bounce-in-top' onclick='Startgame()'>Play Again</button>")
 }
 
 
