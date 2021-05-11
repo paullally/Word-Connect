@@ -100,6 +100,14 @@ h3
     font-weight: 700;
     letter-spacing: 1px;
 }
+h4
+{
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 .hidden 
 {
     visibility: hidden;
@@ -132,11 +140,15 @@ h3
   transform: translateY(0);
   transition: all 0.3s ease-in-out;
 }
-.test
+.hide
 {
     visibility: hidden;
 }
-
+.hidden
+{
+    visibility: hidden;
+    display: none;
+}
 
 
 

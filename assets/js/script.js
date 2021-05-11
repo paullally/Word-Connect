@@ -341,6 +341,6 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbw1SsCEX4L-RWIsgLhFg7
             form.addEventListener('submit', e => {
               e.preventDefault();
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("ASDASDASDAS"))
+                .then(response => setTimeout(function(){ document.getElementById('reply').classList.remove("hidden"); document.getElementById('myForm').classList.add("hidden")}, 1))
                 .catch(error => console.error('Error!', error.message));
             });
