@@ -3,7 +3,7 @@
 
 :root {
   /*p for primary, s for secondary, t for tertiary*/
-  --charcoal: #2E4057;
+  --charcoal:#22223B;
   --orange-p: #FE9D0B;
   --blue: #048BA8;
   --green:#99C24D;
@@ -107,6 +107,11 @@ h4
     font-family: "Roboto";
     font-weight: 700;
     letter-spacing: 1px;
+}
+p
+{
+     color: var(--charcoal);
+      font-size: 1.1rem;
 }
 .hidden 
 {
