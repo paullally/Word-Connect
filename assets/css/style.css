@@ -149,11 +149,14 @@ h4
     visibility: hidden;
     display: none;
 }
-
-
-
-
-
+.h2p
+{
+    background-color: #f1faee;
+}
+.about
+{
+    color: var(--charcoal);
+}
 
 
 .swirl-in-fwd {
