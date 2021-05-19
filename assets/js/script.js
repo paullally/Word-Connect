@@ -10,7 +10,9 @@ function gameover()
 }
  function checklink4(){
             let inputVal = document.getElementById("myInput").value;
-            if(inputVal==link4)
+             console.log(inputVal.toUpperCase())
+            console.log(link4.toUpperCase())
+            if(inputVal.toUpperCase().includes(link4.toUpperCase()))
             {
                 score=score+1;
                 $("#score").text(score);
@@ -35,7 +37,9 @@ $(".game").hide();
 }
  function checklink3(){
             let inputVal = document.getElementById("myInput").value;
-            if(inputVal==link3)
+             console.log(inputVal.toUpperCase())
+            console.log(link3.toUpperCase())
+            if(inputVal.toUpperCase().includes(link3.toUpperCase()))
             {
                 score=score+1;
                 $("#score").text(score);
@@ -60,7 +64,9 @@ $(".game").hide();
 }
  function checklink2(){
             let inputVal = document.getElementById("myInput").value;
-            if(inputVal==link2)
+             console.log(inputVal.toUpperCase())
+            console.log(link2.toUpperCase())
+            if(inputVal.toUpperCase().includes(link2.toUpperCase()))
             {
                 score=score+1;
                 $("#score").text(score);
@@ -85,8 +91,11 @@ $(".game").hide();
 }
  function checklink1(){
             let inputVal = document.getElementById("myInput").value;
-            if(inputVal==link1)
+            console.log(inputVal.toUpperCase())
+            console.log(link1.toUpperCase())
+            if(inputVal.toUpperCase().includes(link1.toUpperCase()))
             {
+
                 score=score+1;
                 $("#score").text(score);
             }
@@ -228,7 +237,7 @@ $.getJSON("game.json", function(json) {
     window.link3 = json[random3].Link;
     window.answer4 =  [json[random3].first,json[random3].second,json[random3].third,json[random3].fourth];
     window.link4 = json[random3].Link;
-    const mix = [json[random].first,json[random].second,json[random].third,json[random].Link,json[random1].first,json[random1].second,json[random1].third,json[random1].Link,json[random2].first,json[random2].second,json[random2].third,json[random2].Link,json[random3].first,json[random3].second,json[random3].third,json[random3].Link];
+    const mix = [json[random].first,json[random].second,json[random].third,json[random].fourth,json[random1].first,json[random1].second,json[random1].third,json[random1].fourth,json[random2].first,json[random2].second,json[random2].third,json[random2].fourth,json[random3].first,json[random3].second,json[random3].third,json[random3].fourth];
     const mixed = shuffle(mix);
     let list = "";
     let i = 0;
