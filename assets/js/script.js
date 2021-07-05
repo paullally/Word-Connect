@@ -224,10 +224,55 @@ function shuffle(sourceArray) {
 function Start() 
 {
  $(".game").empty();
-const random = Math.floor(Math.random() * 10);
-const random1 = Math.floor(Math.random() * 10);
-const random2 = Math.floor(Math.random() * 10);
-const random3 = Math.floor(Math.random() * 10);
+
+ let random = Math.floor(Math.random() * 20);
+ let random1 = Math.floor(Math.random() * 20);
+ let random2 = Math.floor(Math.random() * 20);
+ let random3 = Math.floor(Math.random() * 20);
+ 
+for(let i = 0; i<1000; i++)
+{
+    if(random == random1 || random == random2|| random == random3 )
+    {
+     random = Math.floor(Math.random() * 20);
+     random1 = Math.floor(Math.random() * 20);
+     random2 = Math.floor(Math.random() * 20);
+     random3 = Math.floor(Math.random() * 20);
+     console.log("0")
+    }
+    
+    else if(random1 == random || random1 == random2|| random1 == random3)
+    {
+         random = Math.floor(Math.random() * 20);
+         random1 = Math.floor(Math.random() * 20);
+         random2 = Math.floor(Math.random() * 20);
+         random3 = Math.floor(Math.random() * 20);
+         console.log("1")
+    }
+    else if(random2 == random || random2 == random1|| random2 == random3)
+    {
+         random = Math.floor(Math.random() * 20);
+         random1 = Math.floor(Math.random() * 20);
+         random2 = Math.floor(Math.random() * 20);
+         random3 = Math.floor(Math.random() * 20);
+         console.log("2")
+    }
+    else if(random3 == random || random3 == random1|| random3 == random2)
+    {
+         random = Math.floor(Math.random() * 20);
+         random1 = Math.floor(Math.random() * 20);
+         random2 = Math.floor(Math.random() * 20);
+         random3 = Math.floor(Math.random() * 20);
+         console.log("3")
+    }
+    else
+    {
+        console.log("100")
+        break;
+        
+    }
+   
+}
 $.getJSON("game.json", function(json) {
     window.answer1 = [json[random].first,json[random].second,json[random].third,json[random].fourth];
     window.link1 = json[random].Link;
