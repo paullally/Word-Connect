@@ -1,4 +1,3 @@
-<h2 align=center id="top"><img src="assets/images/logo.png" max-height=100px></h2>
 
 # **Table of Contents**
 
