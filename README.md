@@ -35,3 +35,135 @@
   * [**Content**](#content)
   * [**Media**](#media)
   * [**Acknowledgements**](#acknowledgements)
+
+# **Word Connect**
+## **Purpose**
+
+# **User Experience Design**
+
+## **User Stories**
+
+
+## **Structure**
+
+
+
+
+## **Design**
+---
+
+### **Colour Scheme**
+
+
+
+### **Typography**
+
+
+
+### **Frameworks**
+
+
+### **Icons**
+
+
+### **Wireframes**
+
+#### **Desktop**
+
+
+#### **Tablet**
+
+
+
+#### **Moblie**
+
+
+## **Features**
+---
+### **Existing Features**
+###  **Features on every page**
+
+
+
+### **Home page**
+
+### **Game page**
+
+### **Form page**
+
+
+### **Future Features**
+
+
+## **Technologies Used** 
+---
+- ### **Front End Technologies**
+
+- ### **Other Technologies** 
+
+## **Testing** 
+---
+
+### **Code Testing**
+#### **validator testing**
+
+
+    
+
+### **User Story Testing**
+
+
+
+### **Manual Testing**
+
+
+
+#### **Lighthouse**
+
+
+### **Responsive Testing**
+
+
+
+
+### **Desktop Testing**
+
+
+### **Laptop Testing**
+
+
+
+    
+### **Tablet Testing**
+
+
+### **Mobile Testing**
+
+
+
+
+
+## **Bug Report**
+
+
+# **Deployment**
+
+### **Using Github Pages**
+
+### **Run Locally**
+
+
+# **Credits**
+
+## **Code**
+
+
+ ## **Content** 
+
+
+
+ ## **Media** 
+
+
+
+ ## **Acknowledgements**
