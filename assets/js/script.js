@@ -1,9 +1,8 @@
-var score =0;
-var lives =3;
+var score =0,lives =3,timer;
 function gameover()
 {
     $(".game").empty();
-    timer=0;
+      timer=0;
     $(".game").append("<h1 class=' col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center my-5 bounce-in-top'>Game Over</h1><br><br>"+
     "<h1 class='text-center my-5 col-lg-12 col-md-12 col-sm-12 col-xs-12 bounce-in-top'>You Scored: "+score+"</h1>"+"<br><br>"+
     "<button type='button' class='btn my-5 bounce-in-top' onclick='Startgame()'>Play Again</button>");
@@ -362,8 +361,8 @@ function Startgame()
      $(".2").css("color", "rgb(255, 0, 0)"); 
      $(".3").css("color", "rgb(255, 0, 0)"); 
       $("#score").text(score);
-    fiveMinutes = 60 * 5;
-    display = document.querySelector('#time');
+    var fiveMinutes = 60 * 5;
+    var display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
     Start();
 }
@@ -371,7 +370,7 @@ function Startgame()
 if ($('.smart-scroll').length > 0) { 
     let last_scroll_top = 0;
     $(window).on('scroll', function() {
-        scroll_top = $(this).scrollTop();
+        let scroll_top = $(this).scrollTop();
         if(scroll_top < last_scroll_top) {
             $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
         }
