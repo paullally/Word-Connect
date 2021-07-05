@@ -39,6 +39,10 @@
 # **Word Connect**
 ## **Purpose**
 
+I created this website to be able to play a game similar gameshow called only connect hosted by the bbc. This Website focuses on the final round of the game show only connect where a 4x4 grid of jumbled words appear and the players have to find out which four words are linked together and what links them together.
+
+Word Connect offers a experience similar to only connects final round so users can play the game without going onto the show themselves. Users get a final score to at the end of the game and also have the ability to add games to the website through the sumbission form page. 
+
 # **User Experience Design**
 
 ## **User Stories**
