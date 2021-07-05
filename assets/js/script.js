@@ -10,8 +10,6 @@ function gameover()
 }
  function checklink4(){
             let inputVal = document.getElementById("myInput").value;
-             console.log(inputVal.toUpperCase())
-            console.log(link4.toUpperCase())
             if(inputVal.toUpperCase().includes(link4.toUpperCase()))
             {
                 score=score+1;
@@ -37,8 +35,6 @@ $(".game").hide();
 }
  function checklink3(){
             let inputVal = document.getElementById("myInput").value;
-             console.log(inputVal.toUpperCase())
-            console.log(link3.toUpperCase())
             if(inputVal.toUpperCase().includes(link3.toUpperCase()))
             {
                 score=score+1;
@@ -64,8 +60,6 @@ $(".game").hide();
 }
  function checklink2(){
             let inputVal = document.getElementById("myInput").value;
-             console.log(inputVal.toUpperCase())
-            console.log(link2.toUpperCase())
             if(inputVal.toUpperCase().includes(link2.toUpperCase()))
             {
                 score=score+1;
@@ -91,8 +85,6 @@ $(".game").hide();
 }
  function checklink1(){
             let inputVal = document.getElementById("myInput").value;
-            console.log(inputVal.toUpperCase())
-            console.log(link1.toUpperCase())
             if(inputVal.toUpperCase().includes(link1.toUpperCase()))
             {
 
@@ -238,7 +230,7 @@ for(let i = 0; i<1000; i++)
      random1 = Math.floor(Math.random() * 20);
      random2 = Math.floor(Math.random() * 20);
      random3 = Math.floor(Math.random() * 20);
-     console.log("0")
+    
     }
     
     else if(random1 == random || random1 == random2|| random1 == random3)
@@ -247,7 +239,7 @@ for(let i = 0; i<1000; i++)
          random1 = Math.floor(Math.random() * 20);
          random2 = Math.floor(Math.random() * 20);
          random3 = Math.floor(Math.random() * 20);
-         console.log("1")
+         
     }
     else if(random2 == random || random2 == random1|| random2 == random3)
     {
@@ -255,7 +247,7 @@ for(let i = 0; i<1000; i++)
          random1 = Math.floor(Math.random() * 20);
          random2 = Math.floor(Math.random() * 20);
          random3 = Math.floor(Math.random() * 20);
-         console.log("2")
+         
     }
     else if(random3 == random || random3 == random1|| random3 == random2)
     {
@@ -263,11 +255,10 @@ for(let i = 0; i<1000; i++)
          random1 = Math.floor(Math.random() * 20);
          random2 = Math.floor(Math.random() * 20);
          random3 = Math.floor(Math.random() * 20);
-         console.log("3")
+        
     }
     else
     {
-        console.log("100")
         break;
         
     }
@@ -279,7 +270,7 @@ $.getJSON("game.json", function(json) {
     window.answer2 = [json[random1].first,json[random1].second,json[random1].third,json[random1].fourth];
     window.link2 = json[random1].Link;
     window.answer3 = [json[random2].first,json[random2].second,json[random2].third,json[random2].fourth];
-    window.link3 = json[random3].Link;
+    window.link3 = json[random2].Link;
     window.answer4 =  [json[random3].first,json[random3].second,json[random3].third,json[random3].fourth];
     window.link4 = json[random3].Link;
     const mix = [json[random].first,json[random].second,json[random].third,json[random].fourth,json[random1].first,json[random1].second,json[random1].third,json[random1].fourth,json[random2].first,json[random2].second,json[random2].third,json[random2].fourth,json[random3].first,json[random3].second,json[random3].third,json[random3].fourth];
