@@ -123,23 +123,24 @@ This fufils the user story:
 
 ### **API**
 - [**Google sheets api**](https://developers.google.com/sheets/api)
-    - This was uses to post data from the form on the ***Word-Connect** website to a google spreadsheet.
+    - This was uses to post data from the form on the **Word-Connect** website to a google spreadsheet.
 
 
 ### **Icons**
-
+- [Font Awesome Icons](https://fontawesome.com/)
+    - All the icons used across this website were taken from Font Awesome and styled to match the colour scheme.
 
 ### **Wireframes**
 
-#### **Desktop**
+#### **Home**
+<h2 align=center id="top"><img src="assets/wireframes/howtoplay.png" max-height=400px></h2>
+
+#### **Game**
+<h2 align=center id="top"><img src="assets/wireframes/game.png" max-height=400px></h2>
 
 
-#### **Tablet**
-
-
-
-#### **Moblie**
-
+#### **form**
+<h2 align=center id="top"><img src="assets/wireframes/form.png" max-height=400px></h2>
 
 ## **Features**
 ---
