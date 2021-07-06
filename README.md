@@ -9,6 +9,7 @@
     * [**Colour Scheme**](#colour-scheme)
     * [**Typography**](#typography)
     * [**Frameworks**](#frameworks)
+    * [**API**](#api)
      * [**Icons**](#icons)
     * [**Wireframes**](#Wireframes)
 - [**Features**](#features)
@@ -103,17 +104,26 @@ This fufils the user story:
 
 ### **Typography**
 
-- [**Press Start 2P:**](https://fonts.google.com/specimen/Press+Start+2P?query=pres)
+- [**Press Start 2P**](https://fonts.google.com/specimen/Press+Start+2P?query=pres)
     - The primary font across the website.
     - Press Start 2P was used for the main heading tags and the end game screen. 
     - Press Start 2P was chosen due its distinct style.
 
 - [**Roboto**](https://fonts.google.com/specimen/Roboto?query=rob)
     - The secondary font across the website.
-    -Roboto was used for the Navigation bar Links and paragraphs and some headings in fonts weights of 500 and 700.
+    - Roboto was used for the Navigation bar Links and paragraphs and some headings in fonts weights of 500 and 700.
     - Roboto was chosen for its readablity.
 
 ### **Frameworks**
+- [MDBoostrap](https://mdbootstrap.com/)
+    - Taking the responsiveness of Bootstrap and the front-end UI of Materialize, MDBoostrap makes use of both of these. So all aspects of the site were clean and accessible for all users. 
+
+- [JQuery](https://code.jquery.com/jquery/)
+    - In order to minimalize the amount of Javascript used across the application, I chose to implement a lot of the JS functionality with JQuery.
+
+### **API**
+- [**Google sheets api**](https://developers.google.com/sheets/api)
+    - This was uses to post data from the form on the ***Word-Connect** website to a google spreadsheet.
 
 
 ### **Icons**
