@@ -103,7 +103,15 @@ This fufils the user story:
 
 ### **Typography**
 
+- [**Press Start 2P:**](https://fonts.google.com/specimen/Press+Start+2P?query=pres)
+    - The primary font across the website.
+    - Press Start 2P was used for the main heading tags and the end game screen. 
+    - Press Start 2P was chosen due its distinct style.
 
+- [**Roboto**](https://fonts.google.com/specimen/Roboto?query=rob)
+    - The secondary font across the website.
+    -Roboto was used for the Navigation bar Links and paragraphs and some headings in fonts weights of 500 and 700.
+    - Roboto was chosen for its readablity.
 
 ### **Frameworks**
 
