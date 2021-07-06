@@ -98,6 +98,7 @@ This fufils the user story:
 
 ### **Colour Scheme**
 
+<h2 align=center id="top"><img src="assets/imgs/colourscheme.png" max-height=200px></h2>
 
 
 ### **Typography**
