@@ -146,6 +146,14 @@ This fufils the user story:
 ---
 ### **Existing Features**
 ###  **Features on every page**
+- Navigation bar on Desktop
+<h2 align=left id="top"><img src="assets/imgs/headerdesktop.PNG" max-height=200px></h2>
+
+- Navigation bar on Tablet/Mobile
+<h2 align=center id="top"><img src="assets/images/headermoblie.PNG" max-height=200px></h2>
+
+- Footer on Desktop/Tablet/Mobile
+<h2 align=center id="top"><img src="assets/images/footer.PNG" max-height=200px></h2>
 
 
 
