@@ -6,7 +6,7 @@
   --charcoal:#22223B;
   --orange-p: #FE9D0B;
   --blue: #048BA8;
-  --green:#99C24D;
+  --cream:#f1faee;
   --black: #2F2D2E;
 }
 * {
@@ -20,7 +20,7 @@ html,
 body {
  height: 100%;
  position: relative;
- background-color: #f1faee;
+ background-color: var(--cream);
 }
 .main-container {
  min-height: 100vh; /* will cover the 100% of viewport */
