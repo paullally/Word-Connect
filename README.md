@@ -48,9 +48,9 @@ I created this website to be able to play a game similar gameshow called only co
 ## **User Stories**
 - As a user, I want to be able learn how to play this game through a set of instructions so I can understand how to play.
 - As a user, I want to be able to see what rules the game has so I know what rules I have to follow  . 
-- As a user, I want to be able to see all social media involed with this website so I can follow them on social media . 
+- As a user, I want to be able to see all social media involed with this website so I can follow them on social media. 
 - As a user, I want to be able view the website on all devices so I can show others the website on my mobile phone or laptop. 
-- As a user, I want to be able play a game without having any issues.
+- As a user, I want to be able to navigate through the website easily.
 - As a user, I want to be able know my final score when the game is over so I can check if my scores are getting better. 
 - As a user, I want to be able start a new game after my game has finished without having to refresh the page. 
 - As a user, I want to be able to see a timer and lives counter so I can keep track of my time and lives remaining. 
@@ -58,8 +58,39 @@ I created this website to be able to play a game similar gameshow called only co
 - As a user, I want a well designed UX so it is easy for me to play the game and navigate the website.
 
 ## **Structure**
+Every page contains a Navigation bar at the top of the webpage that will dissapear when you scroll down and reappear when you scroll up. it will direct them to new pages making it easy to navigate the website 
+<br>This fufils the user story:
+> As a user, I want to be able to navigate through the website easily.
 
+All pages  contain a Footer Element with links to the **Word-Connect** social media and a copyright disclaimer
+<br>This fufils the user story:
+>As a user, I want to be able to see all social media involed with this website so I can follow them on social media.
 
+All pages are fully responsive and the layouts will change dependant on screen size. To ensure that content is displayed properly and is readable on every device
+<br>This fufils the user stories:
+
+> As a user, I want to be able view the website on all devices so I can show others the website on my mobile phone or laptop. 
+> As a user, I want a well designed UX so it is easy for me to play the game and navigate the website.
+
+The home page contains 3 sections, each of these sections give the relavant information on how to play **Word-Connect**, the rules of **Word-Connect** and the Acknowledgements 
+<br>
+This fufils the user stories:
+
+> As a user, I want to be able learn how to play this game through a set of instructions so I can understand how to play.
+> As a user, I want to be able to see what rules the game has so I know what rules I have to follow. 
+
+The Play game page is the page that allows you to start the game it shows you your score,lives and time remaining, once the game ends your score will appear and you will be able to press a button to restart the game.
+<br>
+This fufils the user stories:
+
+>As a user, I want to be able know my final score when the game is over so I can check if my scores are getting better. 
+>As a user, I want to be able start a new game after my game has finished without having to refresh the page.
+>As a user, I want to be able to see a timer and lives counter so I can keep track of my time and lives remaining
+
+The Add Game page has a form that you can fill out to create your own game this data will be posted to an google sheet through the google sheets api which will then be reviewed to see if its appropriate to add to the game 
+<br>
+This fufils the user story:
+>As a user, I want to be able to add games so I can see if my words and links will make it onto the website. 
 
 
 ## **Design**
