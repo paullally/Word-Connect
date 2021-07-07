@@ -178,9 +178,20 @@ This page is a form that allows a user to input 16 words and 4 links 4 words per
 ## **Technologies Used** 
 ---
 - ### **Front End Technologies**
+    - HTML
+    - CSS
+    - Javascript
+    - [**JQuery**](https://jquery.com/) to simplify DOM manipulation.
+    - [**MDBoostrap**](https://mdbootstrap.com/) a front end framework used to create responsive aspects across the site. 
+    - [**Font Awesome**](https://fontawesome.com/) Font awesome Icons are used for the Social media links contained in the Footer section of the website.
+    - [**Google Fonts**](https://fonts.google.com/) Google fonts are used throughout the project.
+
 
 - ### **Other Technologies** 
-
+    - [**Gitpod**](http://gitpod.io/) the cloud based IDE used for development 
+    - [**Github**](https://github.com/) to store and share all project code remotely.
+    - [**Balsamiq**](https://balsamiq.com/?gclid=Cj0KCQjwo6D4BRDgARIsAA6uN1-NxDOthq9pGqYzB_1iRxlBvHVwi_4_LaZuGqQT46csctF0xCiTXUMaAqmuEALw_wcB) used to create wireframes.
+     - [**Google Sheets api**](https://developers.google.com/sheets/api) used to create wireframes.
 ## **Testing** 
 ---
 
