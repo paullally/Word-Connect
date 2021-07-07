@@ -1,4 +1,6 @@
+//global scope variables
 var score =0,lives =3,timer;
+//function to end game by emptying the game container and adding html to display score and play again button
 function gameover()
 {
     $(".game").empty();
@@ -7,6 +9,7 @@ function gameover()
     "<h1 class='text-center my-5 col-lg-12 col-md-12 col-sm-12 col-xs-12 bounce-in-top'>You Scored: "+score+"</h1>"+"<br><br>"+
     "<button type='button' class='btn my-5 bounce-in-top' onclick='Startgame()'>Play Again</button>");
 }
+//compares the link input to the actaul link if its correct score gets added calls end game function since it its the last check 
  function checklink4(){
             let inputVal = document.getElementById("myInput").value;
             if(inputVal.toUpperCase().includes(link4.toUpperCase()))
@@ -16,6 +19,7 @@ function gameover()
             }
             gameover();
         }
+//this empties the game container then displays the 4 words connected and an input box to guess the link once guess is input it will check answer
 function guesslink4()
 {
 $(".game").empty();
@@ -32,6 +36,7 @@ $(".game").hide();
         "</form>");
      $(".game").fadeIn();
 }
+//compares the link input to the actaul link if its correct score gets added calls the next check function
  function checklink3(){
             let inputVal = document.getElementById("myInput").value;
             if(inputVal.toUpperCase().includes(link3.toUpperCase()))
@@ -41,6 +46,7 @@ $(".game").hide();
             }
             guesslink4();
         }
+        //this empties the game container then displays the 4 words connected and an input box to guess the link once guess is input it will check answer
 function guesslink3()
 {
 $(".game").empty();
@@ -57,6 +63,7 @@ $(".game").hide();
         "</form>");
     $(".game").fadeIn();
 }
+//same function as other checks
  function checklink2(){
             let inputVal = document.getElementById("myInput").value;
             if(inputVal.toUpperCase().includes(link2.toUpperCase()))
@@ -66,6 +73,7 @@ $(".game").hide();
             }
             guesslink3();
         }
+        //same function as other guess
 function guesslink2()
 {
 $(".game").empty();
@@ -82,6 +90,7 @@ $(".game").hide();
         "</form>");
     $(".game").fadeIn();
 }
+//same as other checks 
  function checklink1(){
             let inputVal = document.getElementById("myInput").value;
             if(inputVal.toUpperCase().includes(link1.toUpperCase()))
@@ -92,6 +101,7 @@ $(".game").hide();
             }
             guesslink2();
         }
+    //same as other guesses
 function guesslink1()
 {
     $(".game").fadeOut(1000);
@@ -110,6 +120,7 @@ function guesslink1()
     $(".game").fadeIn();
          }, 1000);
 }
+//this is called when the answer is correct it will change the tile colours to green and add them to the top of the game with an animation
 function correct()
 {
                 for(let i =0; i<17; i++)
@@ -122,6 +133,7 @@ function correct()
                     }
                 }
 }
+//this function is called when answer is incorrect it will change the highlighted tiles back to normal colour 
 function incorrect()
 {
      setTimeout(function(){
@@ -134,6 +146,7 @@ function incorrect()
                 }
           }, 300);
 }
+// compares the users answer to the answer stored in the variables
 function checkanswer1(check,answer1)
 {
     let count =0;
@@ -151,6 +164,7 @@ function checkanswer1(check,answer1)
         }
         return false;
 }
+// compares the users answer to the answer stored in the variables
 function checkanswer2(check,answer2)
 {
     let count =0;
@@ -167,6 +181,7 @@ function checkanswer2(check,answer2)
         }
         return false;
 }
+// compares the users answer to the answer stored in the variables
 function checkanswer3(check,answer3)
 {
     let count =0;
@@ -183,6 +198,7 @@ function checkanswer3(check,answer3)
         }
         return false;
 }
+// compares the users answer to the answer stored in the variables
 function checkanswer4(check,answer4)
 {
     let count =0;
@@ -200,6 +216,7 @@ function checkanswer4(check,answer4)
         }
         return false;
 }
+// mixes the words list around 
 function shuffle(sourceArray) {
     for (let i = 0; i < sourceArray.length - 1; i++) {
         let j = i + Math.floor(Math.random() * (sourceArray.length - i));
@@ -211,7 +228,9 @@ function shuffle(sourceArray) {
     return sourceArray;
 }
 
-
+  /*
+function that creates 4 random numbers that are not equal then has two other functions inside
+*/
 function Start() 
 {
  $(".game").empty();
@@ -263,6 +282,7 @@ for(let i = 0; i<1000; i++)
     }
    
 }
+// this function opens the json file where all the words and links are stored picks 4 random ones and shuffles them around it also stores the answers and links respectivly to be able to check answers
 $.getJSON("game.json", function(json) {
     window.answer1 = [json[random].first,json[random].second,json[random].third,json[random].fourth];
     window.link1 = json[random].Link;
@@ -285,6 +305,12 @@ $.getJSON("game.json", function(json) {
     });
      $("#start").hide();
     $(".game").append(list);
+    /*
+function to change the colour of the cards on click to yellow and pushes the cards 
+    a list once there is four it will call the check answers function that compares the list to the correct answers which are stored in the global variables above.
+    once compared it will call the correct or incorrect function.
+    it also have a check to see if your score is more then two which would impliement the lives part of the game and reduce lives if you get answer wrong
+*/
     $(".card").click(function() {
         if( $(this).css("background-color")=="rgb(255, 255, 255)")
         {
@@ -338,6 +364,7 @@ $.getJSON("game.json", function(json) {
 });
 });
 }
+// this is the timer function that will start to count down and if your time is out or run out of lives or hit the max score it will call the gueslink function 
 function startTimer(duration, display) {
     timer = duration;
     let minutes, seconds;
@@ -353,6 +380,7 @@ function startTimer(duration, display) {
         }
     }, 1000);
 }
+//this function calls the start timer function and sets the heart colours to red
 function Startgame()
 {
     score=0;
@@ -366,7 +394,7 @@ function Startgame()
     startTimer(fiveMinutes, display);
     Start();
 }
-
+// this is the smart scroll for my navbar it hids nav on scroll down and shows it on scroll up 
 if ($('.smart-scroll').length > 0) { 
     let last_scroll_top = 0;
     $(window).on('scroll', function() {
@@ -380,6 +408,8 @@ if ($('.smart-scroll').length > 0) {
         last_scroll_top = scroll_top;
     });
 }
+
+// this is the form submission it will connect to the google sheet and post the form data to it through the google sheet api
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw1SsCEX4L-RWIsgLhFg7jccwWq4_0esKMr1m__o3l2OPcKzMRWZAZqQLzivjeeFJ07/exec';
             const form = document.forms['google-sheet'];
             form.addEventListener('submit', e => {
