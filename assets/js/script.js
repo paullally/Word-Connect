@@ -119,6 +119,7 @@ function guesslink1()
         "</form>");
     $(".game").fadeIn();
          }, 1000);
+         
 }
 //this is called when the answer is correct it will change the tile colours to green and add them to the top of the game with an animation
 function correct()
@@ -408,6 +409,15 @@ if ($('.smart-scroll').length > 0) {
         last_scroll_top = scroll_top;
     });
 }
+//enter key would reset game if pressed on input added this to stop issues
+$(window).keydown(function(event){
+    if (event.keyCode === 13) {
+        event.preventDefault();
+
+    }
+    
+});
+
 
 // this is the form submission it will connect to the google sheet and post the form data to it through the google sheet api
 const scriptURL = 'https://script.google.com/macros/s/AKfycbw1SsCEX4L-RWIsgLhFg7jccwWq4_0esKMr1m__o3l2OPcKzMRWZAZqQLzivjeeFJ07/exec';
@@ -418,3 +428,6 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbw1SsCEX4L-RWIsgLhFg7
                 .then(response => setTimeout(function(){ document.getElementById('reply').classList.remove("hidden"); document.getElementById('myForm').classList.add("hidden")}, 1))
                 .catch(error => console.error('Error!', error.message));
             });
+
+
+        
