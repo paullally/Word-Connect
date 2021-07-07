@@ -158,11 +158,19 @@ This fufils the user story:
 
 
 ### **Home page**
+The Home page has 3 headings which explains everything that you need to know about the game 
+- A How To Play section that gives a brief explaination of how to play.
+- A Rules section that contains the list of rules for this game.
+- An Acknowledgement heading that shows the user where this idea came from.
 
 ### **Game page**
+The Game page has a single container with a play button in the middle and a timer,score and lives section on top. 
+Once you press play 16 tiles will appear that you can click on. Once you click on 4 tiles the game will compare your answer to the correct answer, If the answer is correct the 4 highlighted tiles will dissappear and reappear and the top of the container and there colour will be green to show that the answer is correct. If the answer is incorrect the tiles will revert to he normal colour.
+Once the game has ended by running out of time,lives or by getting all the answers correct four of the tiles will apear with an input box and a button. You must guess the connection between these four words and check your answer by clicking the button this will repear another 3 times. 
+At the end of this a game over heading will appear along with your score and a button to play again.
 
 ### **Form page**
-
+This page is a form that allows a user to input 16 words and 4 links 4 words perlink, Once they have submitted the form it will post that data to a google sheet through the google sheets api allowing me to review the form input to see if its appropriate to add to the game 
 
 ### **Future Features**
 
