@@ -202,7 +202,11 @@ This page is a form that allows a user to input 16 words and 4 links 4 words per
 
 ### **Code Testing**
 #### **validator testing**
+[W3C Markup Validation](https://validator.w3.org/)
 
+W3C Markup Validation was used to validate both the HTMl and CSS for this application.
+- No errors were noted in the CSS 
+- No errors were noted in the HTML
 
     
 
