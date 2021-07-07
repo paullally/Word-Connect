@@ -174,6 +174,11 @@ This page is a form that allows a user to input 16 words and 4 links 4 words per
 
 ### **Future Features**
 
+- Unique Games
+    - I would like to be able for a user to create there own of word-connect by adding these games to a data base. So you could be able to create your own unique game and not have random words mixed in with them.
+- Share Games
+    - I would like to be able to impliement the ability for users to share games that they have created or games that they have gotten stuck on to see if other can beat it. 
+
 
 ## **Technologies Used** 
 ---
