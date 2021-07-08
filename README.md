@@ -290,22 +290,17 @@ The results were as follows:
 -
     | Page | Responsive| Notes| 
     --- | --- | ---
-    Home | Y | Fully Responsive.
-    Game | Y | Fully Responsive.  
-    Form | Y | Fully Responsive.
+    Home | Y | Navigation bar Turns to hamburger menu
+    Game | Y | Navigation bar Turns to hamburger menu 
+    Form | Y | Navigation bar Turns to hamburger menu
 
 ### **Mobile Testing**
 -
     | Page | Responsive| Notes| 
     --- | --- | ---
     Home | Y | Fully Responsive.
-    Game | Y | Fully Responsive.  
-    Form | Y | Fully Responsive.
-
-
-
-
-## **Bug Report**
+    Game | Y | Game cards appear in 1's instead of 4's
+    Form | Y | Form turns into rows of one.
 
 
 # **Deployment**
