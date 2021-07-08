@@ -249,29 +249,58 @@ W3C Markup Validation was used to validate both the HTMl and CSS for this applic
 
 ### **Manual Testing**
 
+manual testing was completed to make sure each page was fully responsive and the game had no issues while being played
 
 
 #### **Lighthouse**
 
+A desktop Lighthouse report was completed on Word-Connect's website
+The results were as follows:
+<h2 align=center id="top"><img src="assets/imgs/Lighthousetest.PNG" max-height=100px></h2>
+
+A mobile Lighthouse report was completed on Word-Connect's website
+The results were as follows:
+<h2 align=center id="top"><img src="assets/imgs/MobileLighthouse.PNG"max-height=100px></h2>
 
 ### **Responsive Testing**
-
+<h2 align=center id="top"><img src="assets/imgs/responsivetest.PNG"max-height=100px></h2>
 
 
 
 ### **Desktop Testing**
+-
+    | Page | Responsive| Notes| 
+    --- | --- | ---
+    Home | Y | Fully Responsive.
+    Game | Y | Fully Responsive.  
+    Form | Y | Fully Responsive.
 
 
 ### **Laptop Testing**
-
+-
+    | Page | Responsive| Notes| 
+    --- | --- | ---
+    Home | Y | Fully Responsive.
+    Game | Y | Fully Responsive.  
+    Form | Y | Fully Responsive.
 
 
     
 ### **Tablet Testing**
-
+-
+    | Page | Responsive| Notes| 
+    --- | --- | ---
+    Home | Y | Fully Responsive.
+    Game | Y | Fully Responsive.  
+    Form | Y | Fully Responsive.
 
 ### **Mobile Testing**
-
+-
+    | Page | Responsive| Notes| 
+    --- | --- | ---
+    Home | Y | Fully Responsive.
+    Game | Y | Fully Responsive.  
+    Form | Y | Fully Responsive.
 
 
 
