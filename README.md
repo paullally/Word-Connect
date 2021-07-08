@@ -208,11 +208,44 @@ W3C Markup Validation was used to validate both the HTMl and CSS for this applic
 - No errors were noted in the CSS 
 - No errors were noted in the HTML
 
-    
+[JSHint](https://jshint.com/)
+ 
+ **Metrics**
+
+- There are 31 functions in this file.
+
+- Function with the largest signature take 2 arguments, while the median is 0.
+
+- Largest function has 25 statements in it, while the median is 5.
+
+- The most complex function has a cyclomatic complexity value of 14 while the median is 2.
+
+- Eight undefined variables. (These are my window variables)
 
 ### **User Story Testing**
+1. As a user, I want to be able learn how to play this game through a set of instructions so I can understand how to play.
+    - The Home page has a how to play sections witch goes through how the game is played and how to answer the questions.
+2. As a user, I want to be able to see what rules the game has so I know what rules I have to follow .
+    - The Home Page contains a rules section that has a list of all the rules in it.
+3. As a user, I want to be able to see all social media involed with this website so I can follow them on social media. 
+    - Every page has a footer element with links to all of **Word-Connects's**  social media.
 
+4. As a user, I want to be able view the website on all devices so I can show others the website on my mobile phone or laptop
+    - The **Word-Connect** Website is fully responsive, You can view it on all devices.
+5. As a user, I want to be able to navigate through the website easily.
+    - Every page has a navigation bar at the top of it with links to all pages.
+6. As a user, I want to be able know my final score when the game is over so I can check if my scores are getting better. 
+    - When the game ends there will and end game screen with your final score.
+7. As a user, I want to be able start a new game after my game has finished without having to refresh the page
+     - The end game screen has a play again button on it which will reset the game.
+8. As a user, I want to be able to see a timer and lives counter so I can keep track of my time and lives remaining. 
+     - The game has a timer and lives counter at the top.
 
+9. As a user, I want to be able to add games so I can see if my words and links will make it onto the website. 
+    - The **Word-Connect** website has a form where everyone can submit their games.
+10. As a user, I want a well designed UX so it is easy for me to play the game and navigate the website.
+    - The **Word-Connect** Website is fully responsive containing header and footer elements making it easy to navigate through the website.
+ 
 
 ### **Manual Testing**
 
