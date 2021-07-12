@@ -122,8 +122,9 @@ This fufils the user story:
     - In order to minimalize the amount of Javascript used across the application, I chose to implement a lot of the JS functionality with JQuery.
 
 ### **API**
-- [**Google sheets api**](https://developers.google.com/sheets/api)
-    - This was uses to post data from the form on the **Word-Connect** website to a google spreadsheet.
+- [**Fetch API**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+    - This was used along side the google script editor to post data from a form to a google spread sheet.
+    - You can view this by logging into the gmail wordconnectms2@gmail.com Passoword: Word-Connect. You can access the shee the data is posted to and also the script code.
 
 
 ### **Icons**
