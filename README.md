@@ -345,13 +345,14 @@ To work on the project code within a local IDE such as VSCode:
 
 ## **Code**
 
+[Geeksforgeeks](https://www.geeksforgeeks.org/how-to-fetch-data-from-json-file-and-display-in-html-table-using-jquery/) was used to help with getting the json data from a file and adding it to the html.
 
- ## **Content** 
+[Github](https://github.com/jamiewilson/form-to-google-sheets/blob/master/README.md) was used to help post the form data to a google sheet using the script editor.
 
-
-
- ## **Media** 
-
-
+Help with the footer was gotten from [ Keep that damn footer at the bottom. ](https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551).
 
  ## **Acknowledgements**
+
+**Word-Connect** was inspired by the bbc gameshow [only connect](https://www.bbc.co.uk/programmes/b00lskhg).
+
+Thanks to my Mentor [Chris Quinn](https://github.com/10xOXR). for all the input and support during this project.
