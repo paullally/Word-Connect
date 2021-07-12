@@ -352,6 +352,7 @@ To work on the project code within a local IDE such as VSCode:
 
 Help with the footer was gotten from [ Keep that damn footer at the bottom. ](https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551).
 
+[animista](https://animista.net/) was used to help with the css for animations in the game.
  ## **Acknowledgements**
 
 **Word-Connect** was inspired by the bbc gameshow [only connect](https://www.bbc.co.uk/programmes/b00lskhg).
