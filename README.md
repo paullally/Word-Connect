@@ -33,8 +33,6 @@
     * [**Locally**](run-locally)
 * [**Credits**](#credits)
      * [**Code**](#code)
-  * [**Content**](#content)
-  * [**Media**](#media)
   * [**Acknowledgements**](#acknowledgements)
 
 # **Word-Connect**
