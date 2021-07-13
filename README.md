@@ -149,10 +149,10 @@ This fufils the user story:
 <h2 align=left id="top"><img src="assets/imgs/headerdesktop.PNG" max-height=200px></h2>
 
 - Navigation bar on Tablet/Mobile
-<h2 align=center id="top"><img src="assets/images/headermoblie.PNG" max-height=200px></h2>
+<h2 align=center id="top"><img src="assets/imgs/headermoblie.PNG" max-height=200px></h2>
 
 - Footer on Desktop/Tablet/Mobile
-<h2 align=center id="top"><img src="assets/images/footer.PNG" max-height=200px></h2>
+<h2 align=center id="top"><img src="assets/imgs/footer.PNG" max-height=200px></h2>
 
 
 
@@ -207,6 +207,19 @@ W3C Markup Validation was used to validate both the HTMl and CSS for this applic
 - No errors were noted in the CSS 
 - No errors were noted in the HTML
 
+**Home**
+<h2 align=center id="top"><img src="assets/imgs/validatorhome.PNG" max-height=50px></h2>
+
+**Game**
+<h2 align=center id="top"><img src="assets/imgs/validatorgame.PNG" max-height=200px></h2>
+
+**Form**
+<h2 align=center id="top"><img src="assets/imgs/validatorform.PNG" max-height=200px></h2>
+
+**CSS**
+**Game**
+<h2 align=center id="top"><img src="assets/imgs/validatorcss.PNG" max-height=200px></h2>
+
 [JSHint](https://jshint.com/)
  
  **Metrics**
@@ -220,6 +233,8 @@ W3C Markup Validation was used to validate both the HTMl and CSS for this applic
 - The most complex function has a cyclomatic complexity value of 14 while the median is 2.
 
 - Eight undefined variables. (These are my window variables)
+
+<h2 align=center id="top"><img src="assets/imgs/jshint.png" max-height=200px></h2>
 
 ### **User Story Testing**
 1. As a user, I want to be able learn how to play this game through a set of instructions so I can understand how to play.
@@ -311,7 +326,7 @@ This project was developed using the Gitpod IDE, committed to git and pushed to 
 To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
 
 1. Log into GitHub.
-2. From the list of repositories on the screen, select paullally/Brew-Brewery
+2. From the list of repositories on the screen, select paullally/Word-Connect
 3. From the menu items near the top of the page, select Settings.
 4. Scroll down to the GitHub Pages section.
 5. Under Source click the drop-down menu labelled None and select Master Branch
@@ -327,12 +342,12 @@ Then follow these steps:
 1. Install the [Gitpod Browser Extentions for Chrome](https://www.gitpod.io/docs/browser-extension/)
 2. After installation, restart the browser
 3. Log into [Gitpod](https://gitpod.com) with your gitpod account.
-4. Navigate to the [Project GitHub repository](https://github.com/paullally/Brew-Brewery)
+4. Navigate to the [Project GitHub repository](https://github.com/paullally/Word-Connect)
 5. Click the green "Gitpod" button in the top right corner of the respository
 6. This will trigger a new gitpod workspace to be created from the code in github where you can work locally.
 
 To work on the project code within a local IDE such as VSCode:
-1. Follow this link to the [Project GitHub repository](https://github.com/paullally/Brew-Brewery).
+1. Follow this link to the [Project GitHub repository](https://github.com/paullally/Word-Connect).
 2. Under the repository name, click "Clone or download".
 3. In the Clone with HTTPs section, copy the clone URL for the repository. 
 4. In your local IDE open the terminal.
