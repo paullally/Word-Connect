@@ -86,7 +86,7 @@ This fufils the user stories:
 >As a user, I want to be able start a new game after my game has finished without having to refresh the page.
 >As a user, I want to be able to see a timer and lives counter so I can keep track of my time and lives remaining
 
-The Add Game page has a form that you can fill out to create your own game this data will be posted to an google sheet through the google sheets api which will then be reviewed to see if its appropriate to add to the game 
+The Add Game page has a form that you can fill out to create your own game this data will be posted to a google sheet through the fetch api which will then be reviewed to see if its appropriate to add to the game 
 <br>
 This fufils the user story:
 >As a user, I want to be able to add games so I can see if my words and links will make it onto the website. 
@@ -169,7 +169,7 @@ Once the game has ended by running out of time,lives or by getting all the answe
 At the end of this a game over heading will appear along with your score and a button to play again.
 
 ### **Form page**
-This page is a form that allows a user to input 16 words and 4 links 4 words perlink, Once they have submitted the form it will post that data to a google sheet through the google sheets api allowing me to review the form input to see if its appropriate to add to the game 
+This page is a form that allows a user to input 16 words and 4 links 4 words perlink, Once they have submitted the form it will post that data to a google sheet through the fetch api allowing me to review the form input to see if its appropriate to add to the game 
 
 ### **Future Features**
 
@@ -195,7 +195,7 @@ This page is a form that allows a user to input 16 words and 4 links 4 words per
     - [**Gitpod**](http://gitpod.io/) the cloud based IDE used for development 
     - [**Github**](https://github.com/) to store and share all project code remotely.
     - [**Balsamiq**](https://balsamiq.com/?gclid=Cj0KCQjwo6D4BRDgARIsAA6uN1-NxDOthq9pGqYzB_1iRxlBvHVwi_4_LaZuGqQT46csctF0xCiTXUMaAqmuEALw_wcB) used to create wireframes.
-     - [**Google Sheets api**](https://developers.google.com/sheets/api) used to create wireframes.
+     - [**Fetch api**](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) used post data to a google sheet.
 ## **Testing** 
 ---
 
